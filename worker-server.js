@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const multer = require('multer');
 const cors = require('cors');
-const TelegramBot = require('node-telegram-bot-api').default;
+const TelegramBot = require('node-telegram-bot-api'); // HAPUS .default
 const { createClient } = require('@supabase/supabase-js');
 const fs = require('fs');
 const path = require('path');
@@ -149,8 +149,8 @@ if (!fs.existsSync('downloads')) {
   fs.mkdirSync('downloads');
 }
 
-// Start server
-app.listen(PORT, () => {
-  console.log(`🚀 Worker server berjalan di http://localhost:${PORT}`);
+// Start server - PENTING: bind ke 0.0.0.0 untuk Koyeb
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`🚀 Worker server berjalan di port ${PORT}`);
   console.log('📡 Menunggu request dari Next.js...');
 });
