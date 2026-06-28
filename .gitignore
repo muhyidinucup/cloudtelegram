@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+web-ui/node_modules/
+
+# Environment variables (JANGAN upload secrets)
+.env
+web-ui/.env.local
+
+# Upload folders
+uploads/
+downloads/
+web-ui/uploads/
+web-ui/downloads/
+
+# Build output
+web-ui/.next/
+web-ui/out/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
